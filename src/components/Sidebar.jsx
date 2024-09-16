@@ -7,12 +7,14 @@ function Sidebar() {
   return (
     <aside id="sidebar">
       <img src={Avatar} alt="Anderson Dutra" />
-      <p className="title">Desenvolvedor</p>
+      <p className="title">Desenvolvedor Front-End</p>
       <SocialNetworks />
       <InformationContainer />
-      <a href="" className="btn">Download currículo</a>
+      <a href="" className="btn">
+        Download currículo
+      </a>
     </aside>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

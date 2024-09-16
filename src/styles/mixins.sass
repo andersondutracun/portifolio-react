@@ -17,3 +17,20 @@
     background: varibles.$gradient
     height: 3px
     width: 30%
+
+@mixin respond-to($media)
+  @if $media == small
+    @media (max-width: 480px)
+      @content
+
+  @if $media == medium
+    @media (min-width: 481px) and (max-width: 768px)
+      @content
+
+  @if $media == large
+    @media (min-width: 769px) and (max-width: 1024px)
+      @content
+
+  @if $media == xlarge
+    @media (min-width: 1025px) and (max-width: 1440px)
+      @content

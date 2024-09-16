@@ -12,18 +12,41 @@
     position: relative
     padding: 3rem 0
 
+    
+
     img
-        max-width: 70%
+        max-width: 75%
         border-radius: varibles.$container-border-radius
         position: absolute
         top: -3rem
+
+        @include mixins.respond-to(large)
+             max-width: 48%
+
+        @include mixins.respond-to(medium)
+             max-width: 70%
+
+        @include mixins.respond-to(small)
+             max-width: 80%
 
     .title
         color: varibles.$text-color-secondary
         background-color: varibles.$bg-color-secondary
         border-radius: varibles.$card-border-radius
-        margin-top: 20rem
+        margin-top: 30rem
         padding: .8rem 1.2rem
+
+        @include mixins.respond-to(xlarge)
+             margin-top: 12rem
+
+        @include mixins.respond-to(large)
+             margin-top: 20rem
+
+        @include mixins.respond-to(medium)
+             margin-top: 20rem
+
+        @include mixins.respond-to(small)
+             margin-top: 13rem
 
     .btn
         @include mixins.btn

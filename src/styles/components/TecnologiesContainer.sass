@@ -9,6 +9,14 @@
         flex-wrap: wrap
         gap: 1.5rem
 
+        @include mixins.respond-to(small)
+            flex-direction: column
+
+        @include mixins.respond-to(medium)
+            flex-direction: column
+
+
+
         .technology-card
             @include mixins.center
             gap: 1rem
@@ -17,12 +25,21 @@
             width: 45%
             border-radius: varibles.$card-border-radius
 
+            @include mixins.respond-to(small)
+                width: 100%
+
+            @include mixins.respond-to(medium)
+                width: 100%
+
+
             h3
                 color: varibles.$text-color
                 margin-bottom: 1rem
 
             svg
                 font-size: 6rem
+
+                
 
         #html
             svg
